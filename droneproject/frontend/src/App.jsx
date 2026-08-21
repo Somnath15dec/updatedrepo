@@ -2698,7 +2698,7 @@ const LiveMonitor = () => {
         formData.append("audio", wavBlob, "live_audio.wav");
 
         try {
-            const res = await fetch("http://localhost:5050/api/stream_predict", {
+            const res = await fetch("/api/stream_predict", {
                 method: "POST",
                 body: formData
             });
